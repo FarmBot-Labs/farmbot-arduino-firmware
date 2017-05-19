@@ -27,7 +27,7 @@ public:
 	//int moveAbsolute(	long xDest, long yDest,long zDest,
 	//			unsigned int maxStepsPerSecond,
 	//			unsigned int maxAccelerationStepsPerSecond);
-	int moveToCoords(	long xDest, long yDest, long zDest, 
+	int moveToCoords(	long xDest, long yDest, long zDest,
 				 unsigned int xMaxSpd, unsigned int yMaxSpd, unsigned int zMaxSpd,
 				 bool homeX, bool homeY, bool homeZ);
 
@@ -38,9 +38,9 @@ public:
 	void disableMotors();
 
 private:
-	StepperControlAxis axisX;
-	StepperControlAxis axisY;
-	StepperControlAxis axisZ;
+	StepperControlAxis axis1;
+	StepperControlAxis axis2;
+	StepperControlAxis axis3;
 
 	bool axisActive[3];
 
