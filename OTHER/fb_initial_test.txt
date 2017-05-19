@@ -1,0 +1,33 @@
+TOLERANCE = 3
+
+====  POLAR -> RECT tests  ====
+
+test 1: polar(0, 0) -> rect(0, 0),  result: (0, 0)  [PASS]
+test 2: polar(4242, 0) -> rect(4242, 0),  result: (4242, 0)  [PASS]
+test 3: polar(4242, 180) -> rect(-4242, 0),  result: (-4241, 2)  [PASS]
+test 4: polar(4242, 270) -> rect(0, -4242),  result: (0, -4242)  [PASS]
+test 5: polar(4242, 90) -> rect(0, 4242),  result: (1, 4241)  [PASS]
+test 6: polar(6000, 0) -> rect(6000, 0),  result: (6000, 0)  [PASS]
+test 7: polar(6000, 135) -> rect(-4242, 4242),  result: (-4242, 4243)  [PASS]
+test 8: polar(6000, 180) -> rect(-6000, 0),  result: (-5999, 3)  [PASS]
+test 9: polar(6000, 225) -> rect(-4242, -4242),  result: (-4244, -4241)  [PASS]
+test 10: polar(6000, 270) -> rect(0, -6000),  result: (-1, -6000)  [PASS]
+test 11: polar(6000, 315) -> rect(4242, -4242),  result: (4242, -4242)  [PASS]
+test 12: polar(6000, 45) -> rect(4242, 4242),  result: (4244, 4240)  [PASS]
+test 13: polar(6000, 90) -> rect(0, 6000),  result: (1, 5999)  [PASS]
+
+====  RECT -> POLAR tests  ====
+
+test 1: rect(0, 0) -> polar(0, 0),  result: (0, 0)  [PASS]
+test 2: rect(4242, 0) -> polar(4242, 0),  result: (4242, 0)  [PASS]
+test 3: rect(-4242, 0) -> polar(4242, 180),  result: (4242, 359)  [FAIL]
+test 4: rect(0, -4242) -> polar(4242, 270),  result: (4242, 630)  [FAIL]
+test 5: rect(0, 4242) -> polar(4242, 90),  result: (4242, 89)  [PASS]
+test 6: rect(6000, 0) -> polar(6000, 0),  result: (6000, 0)  [PASS]
+test 7: rect(-4242, 4242) -> polar(6000, 135),  result: (5999, 134)  [PASS]
+test 8: rect(-6000, 0) -> polar(6000, 180),  result: (6000, 359)  [FAIL]
+test 9: rect(-4242, -4242) -> polar(6000, 225),  result: (5999, 224)  [PASS]
+test 10: rect(0, -6000) -> polar(6000, 270),  result: (6000, 630)  [FAIL]
+test 11: rect(4242, -4242) -> polar(6000, 315),  result: (5999, 315)  [PASS]
+test 12: rect(4242, 4242) -> polar(6000, 45),  result: (5999, 44)  [PASS]
+test 13: rect(0, 6000) -> polar(6000, 90),  result: (6000, 89)  [PASS]
