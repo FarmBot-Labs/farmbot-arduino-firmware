@@ -1,4 +1,4 @@
-TOLERANCE = 3
+TOLERANCE = 3 steps
 
 ====  POLAR -> RECT tests  ====
 

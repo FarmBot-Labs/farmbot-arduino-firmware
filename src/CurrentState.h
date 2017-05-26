@@ -12,7 +12,8 @@
 
 #define RADIUS_STEPS 6000
 // #define STEPS_PER_DEG 14.9173553 // 27:1
-#define STEPS_PER_DEG 28.5714286 // 51:1
+// #define STEPS_PER_DEG 28.5714286 // 51:1
+#define STEPS_PER_DEG 55.5555556 // 100:1
 
 class CurrentState {
 public:
