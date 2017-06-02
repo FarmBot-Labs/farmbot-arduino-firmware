@@ -33,7 +33,9 @@ Command::Command(String commandString) {
 
 	charPointer = strtok(charBuf, " ");
 
-	if (charPointer[0] == 'G' || charPointer[0] == 'F') {
+	if (charPointer[0] == 'G' ||
+         charPointer[0] == 'F' ||
+         charPointer[0] == 'P') {
 		commandCodeEnum = getGCodeEnum(charPointer);
 	} else {
 		invalidCommand = true;
@@ -120,6 +122,16 @@ CommandCodeEnum Command::getGCodeEnum(char* code) {
 	if (strcmp(code, "F83") == 0) {
 		return F83;
 	}
+
+   if (strcmp(code, "P01") == 0) {
+      return P01;
+   }
+   if (strcmp(code, "P02") == 0) {
+      return P02;
+   }
+   if (strcmp(code, "P03") == 0) {
+      return P03;
+   }
 
 	return CODE_UNDEFINED;
 }

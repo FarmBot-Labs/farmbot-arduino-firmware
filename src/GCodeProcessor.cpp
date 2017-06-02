@@ -94,8 +94,13 @@ GCodeHandler* GCodeProcessor::getGCodeHandler(CommandCodeEnum codeEnum) {
 		return F82Handler::getInstance();
 	case F83:
 		return F83Handler::getInstance();
-	}
+
+   case P01:
+      return P01Handler::getInstance();
+   case P02:
+      return P02Handler::getInstance();
+   case P03:
+      return P03Handler::getInstance();
+   }
 	return NULL;
 }
-
-

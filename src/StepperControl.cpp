@@ -499,8 +499,16 @@ void StepperControl::enableMotors() {
 void StepperControl::disableMotors() {
    axis1.disableMotor();
    axis2.disableMotor();
-   // axis3.disableMotor(); locks the Z-Axis when stopped
+   // axis3.disableMotor(); // locks the Z-Axis when stopped
    delay(100);
+}
+
+void StepperControl::lockZ() {
+   axis3.enableMotor();
+}
+
+void StepperControl::unlockZ() {
+   axis3.disableMotor();
 }
 
 bool StepperControl::endStopsReached() {

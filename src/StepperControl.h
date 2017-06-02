@@ -35,7 +35,9 @@ public:
 	int calibrateAxis(int axis);
 	void initInterrupt();
 	void enableMotors();
-	void disableMotors();
+   void disableMotors();
+   void lockZ();
+	void unlockZ();
 
 private:
 	StepperControlAxis axis1;

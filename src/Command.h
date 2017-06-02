@@ -31,7 +31,10 @@ enum CommandCodeEnum
   F61 = 161,
   F81 = 181,
   F82 = 182,
-  F83 = 183
+  F83 = 183,
+  P01 = 201,
+  P02 = 202,
+  P03 = 203
 };
 
 #define NULL 0

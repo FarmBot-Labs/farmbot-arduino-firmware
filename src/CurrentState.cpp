@@ -37,6 +37,14 @@ CurrentState::CurrentState() {
    speed = 0;
 }
 
+void CurrentState::zeroAll() {
+   x = RADIUS_STEPS;
+   y = RADIUS_STEPS;
+   r = 0;
+   t = 0;
+   z = 0;
+}
+
 long CurrentState::getX() {
    return x;
 }

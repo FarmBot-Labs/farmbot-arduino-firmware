@@ -40,6 +40,10 @@
 #include "F82Handler.h"
 #include "F83Handler.h"
 
+#include "P01Handler.h"
+#include "P02Handler.h"
+#include "P03Handler.h"
+
 class GCodeProcessor {
 public:
 	GCodeProcessor();

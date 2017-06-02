@@ -18,6 +18,7 @@
 class CurrentState {
 public:
    static CurrentState* getInstance();
+   void CurrentState::zeroAll();
    long getX();
    long getY();
    long getR();
